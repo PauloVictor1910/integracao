@@ -1,0 +1,14 @@
+{
+  "name": "calculadora-de-desconto",
+  "version": "1.0.0",
+  "description": "Calculadora de Desconto",
+  "main": "index.html",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^27.0.0"
+  }
+}
+
+  

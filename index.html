@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Desconto</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <label for="preco">Preço:</label>
+    <input type="number" id="preco" step="0.01"><br>
+
+    <label for="desconto"> Desconto (%):</label>
+    <input type="number" id="desconto" step="0.01"><br>
+
+    <button onclick="calcularDesconto()">Calcular Desconto</button>
+
+    <p>O valor com desconto é: <span id="resultado"></span></p>
+
+    <script>
+        function calcularDesconto() {
+            const preco = parseFloat(document.getElementById('preco').value);
+            const desconto = parseFloat(document.getElementById('desconto').value);
+
+            if (!isNaN(preco) && !isNaN(desconto)) {
+                const valorComDesconto = preco - (preco * (desconto / 100));
+                document.getElementById('resultado').textContent = valorComDesconto.toFixed(2);
+            } else {
+                alert('Por favor, insira valores válidos.');
+            }
+        }
+    </script>
+</body>
+</html>

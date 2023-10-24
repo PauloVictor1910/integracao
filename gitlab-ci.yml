@@ -1,0 +1,21 @@
+stages:
+  - construcao
+  - teste
+  - implantacao
+
+instalar_dependencias:
+  stage: construcao
+  script:
+    - npm install
+
+teste:
+  stage: teste
+  script:
+    - npm run test
+
+implantacao:
+  stage: implantacao
+  script:
+    - echo "Copiando arquivos para o diretório de destino"
+    # Aqui você pode adicionar os comandos para copiar os arquivos para o servidor de hospedagem
+
